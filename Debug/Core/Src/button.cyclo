@@ -1,0 +1,4 @@
+../Core/Src/button.c:47:6:getKeyInput	7
+../Core/Src/button.c:80:9:isButtonPressed	2
+../Core/Src/button.c:89:9:isButtonLongPressed	2
+../Core/Src/button.c:98:6:resetButton	1

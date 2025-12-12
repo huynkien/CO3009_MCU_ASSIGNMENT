@@ -1,0 +1,5 @@
+../Core/Src/manual_mode.c:10:6:fsm_manual_traffic_light_run	8	static
+../Core/Src/manual_mode.c:74:6:man_green_red	8	static
+../Core/Src/manual_mode.c:88:6:man_yellow_red	8	static
+../Core/Src/manual_mode.c:101:6:man_red_green	8	static
+../Core/Src/manual_mode.c:114:6:man_red_yellow	8	static

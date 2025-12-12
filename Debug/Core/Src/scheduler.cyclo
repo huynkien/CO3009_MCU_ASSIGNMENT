@@ -1,0 +1,10 @@
+../Core/Src/scheduler.c:25:6:SCH_Init	1
+../Core/Src/scheduler.c:30:6:SCH_Update	6
+../Core/Src/scheduler.c:44:10:SCH_Add_Task	3
+../Core/Src/scheduler.c:62:6:SCH_Dispatch_Tasks	5
+../Core/Src/scheduler.c:84:9:SCH_Delete_Task	7
+../Core/Src/scheduler.c:114:6:SCH_Clear_All_Tasks	2
+../Core/Src/scheduler.c:122:17:SCH_Get_New_TaskID	2
+../Core/Src/scheduler.c:133:15:SCH_Create_Node	2
+../Core/Src/scheduler.c:148:13:SCH_Free_Node	2
+../Core/Src/scheduler.c:154:13:SCH_Insert_Task_Sorted	6

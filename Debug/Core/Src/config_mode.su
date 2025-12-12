@@ -1,0 +1,16 @@
+../Core/Src/config_mode.c:31:13:display_config_lcd	16	static
+../Core/Src/config_mode.c:42:16:fix	16	static
+../Core/Src/config_mode.c:48:6:turn_off_on_both	8	static
+../Core/Src/config_mode.c:56:6:turn_red_on_both	8	static
+../Core/Src/config_mode.c:64:6:turn_yel_on_both	8	static
+../Core/Src/config_mode.c:72:6:turn_grn_on_both	8	static
+../Core/Src/config_mode.c:80:13:confirm_red_time	16	static
+../Core/Src/config_mode.c:92:13:confirm_yel_time	16	static
+../Core/Src/config_mode.c:106:13:confirm_grn_time	16	static
+../Core/Src/config_mode.c:124:6:init_cfg_red	8	static
+../Core/Src/config_mode.c:135:6:cfg_red	8	static
+../Core/Src/config_mode.c:152:6:init_cfg_yel	8	static
+../Core/Src/config_mode.c:163:6:cfg_yel	8	static
+../Core/Src/config_mode.c:180:6:init_cfg_grn	8	static
+../Core/Src/config_mode.c:191:6:cfg_grn	8	static
+../Core/Src/config_mode.c:208:6:fsm_config_traffic_light_run	16	static
