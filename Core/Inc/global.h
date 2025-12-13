@@ -8,18 +8,19 @@
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
 
-#define STATUS_LED_TIMER			0
-#define NORMAL_TIMER 				1
-#define CLOCK_TIMER					2
-#define CLOCK_COUNTER				3
-#define CONFIG_TIMER				4
-#define DISPLAY_TIMER				5
+// Software Timer indices
+#define TIMER_STATE      0   // State duration timer (for auto mode state transitions)
+#define TIMER_CLOCK      1   // 1-second clock timer (for countdown display)
+#define TIMER_BLINK      2   // LED blink timer (for config mode)
 
+// Time constants (in seconds)
 #define RED_TIME					10
 #define YEL_TIME					3
 #define GRN_TIME					7
-#define CONFIG_TIME					20
-#define DISPLAY_TIME				2
+
+// Tick constants (task runs every 10ms, so 100 ticks = 1 second)
+#define TICKS_PER_SECOND            1000
+#define CONFIG_BLINK_TICKS          500   // 500ms blink period
 
 enum traffic_light_state {
 	INIT,

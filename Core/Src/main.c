@@ -106,10 +106,10 @@ int main(void)
   
   HAL_TIM_Base_Start_IT(&htim3);
   
-  SCH_Add_Task(task_toggle_status_led, 1000, 500);
-  SCH_Add_Task(task_traffic_light_fsm, 1000, 50);
-  SCH_Add_Task(task_button_scan, 1000, 100);
-//  SCH_Add_Task(task_2led7, 1000, 1000);
+  SCH_Add_Task(task_timer_run, 0, 1);
+  
+  SCH_Add_Task(task_toggle_status_led, 1000, 1000);
+  SCH_Add_Task(task_traffic_light_fsm, 100, 10);
   /* USER CODE END 2 */
 
   /* Infinite loop */
