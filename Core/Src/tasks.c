@@ -6,20 +6,23 @@
  */
 
 #include "tasks.h"
-#include "auto_mode.h"  // Để lấy clock_counter
+#include "auto_mode.h"
+#include "software_timer.h"
 
+void task_timer_run(void) {
+	timerRun();
+}
 
 void task_toggle_status_led(void) {
 	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 }
 
-// Task: Run traffic light FSM (auto mode + config mode)
 void task_traffic_light_fsm(void) {
-	// Run appropriate FSM based on current state
+	//get button signal
 	getKeyInput(&button0);
 	getKeyInput(&button1);
 	getKeyInput(&button2);
-//	getKeyInput(&button3);
+	///FSMs
 	if (traffic_light_status <= AUTO_RED_YEL) {
 		fsm_auto_traffic_light_run();
 	} else if (traffic_light_status >= CFG_RED && traffic_light_status <= CFG_GRN) {
@@ -29,21 +32,3 @@ void task_traffic_light_fsm(void) {
 	}
 }
 
-void task_button_scan(void) {
-	getKeyInput(&button0);
-	getKeyInput(&button1);
-	getKeyInput(&button2);
-//	getKeyInput(&button3);
-}
-
-void display_all_clock(void) {
-//	uint16_t counter = get_clock_counter();
-//
-//	if (counter > 99) counter = 99;
-//
-//	led7_write_number(counter);
-}
-
-void task_2led7(void) {
-	display_all_clock();
-}
