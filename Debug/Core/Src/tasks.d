@@ -29,7 +29,8 @@ Core/Src/tasks.o: ../Core/Src/tasks.c ../Core/Inc/tasks.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/gpio.h ../Core/Inc/global.h ../Core/Inc/auto_mode.h \
  ../Core/Inc/button.h ../Core/Inc/i2c-lcd.h ../Core/Inc/config_mode.h \
- ../Core/Inc/manual_mode.h ../Core/Inc/auto_mode.h
+ ../Core/Inc/manual_mode.h ../Core/Inc/auto_mode.h \
+ ../Core/Inc/software_timer.h ../Core/Inc/tim.h
 ../Core/Inc/tasks.h:
 ../Core/Inc/led_7_seg.h:
 ../Core/Inc/spi.h:
@@ -69,3 +70,5 @@ Core/Src/tasks.o: ../Core/Src/tasks.c ../Core/Inc/tasks.h \
 ../Core/Inc/config_mode.h:
 ../Core/Inc/manual_mode.h:
 ../Core/Inc/auto_mode.h:
+../Core/Inc/software_timer.h:
+../Core/Inc/tim.h:

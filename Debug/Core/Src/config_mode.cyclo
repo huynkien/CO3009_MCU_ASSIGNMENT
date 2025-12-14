@@ -8,9 +8,9 @@
 ../Core/Src/config_mode.c:92:13:confirm_yel_time	3
 ../Core/Src/config_mode.c:106:13:confirm_grn_time	3
 ../Core/Src/config_mode.c:124:6:init_cfg_red	1
-../Core/Src/config_mode.c:135:6:cfg_red	4
-../Core/Src/config_mode.c:152:6:init_cfg_yel	1
-../Core/Src/config_mode.c:163:6:cfg_yel	4
-../Core/Src/config_mode.c:180:6:init_cfg_grn	1
-../Core/Src/config_mode.c:191:6:cfg_grn	4
-../Core/Src/config_mode.c:208:6:fsm_config_traffic_light_run	20
+../Core/Src/config_mode.c:134:6:cfg_red	3
+../Core/Src/config_mode.c:147:6:init_cfg_yel	1
+../Core/Src/config_mode.c:158:6:cfg_yel	3
+../Core/Src/config_mode.c:172:6:init_cfg_grn	1
+../Core/Src/config_mode.c:183:6:cfg_grn	3
+../Core/Src/config_mode.c:197:6:fsm_config_traffic_light_run	20

@@ -28,7 +28,8 @@ Core/Src/auto_mode.o: ../Core/Src/auto_mode.c ../Core/Inc/auto_mode.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/button.h ../Core/Inc/global.h ../Core/Inc/i2c-lcd.h \
  ../Core/Inc/config_mode.h ../Core/Inc/auto_mode.h \
- ../Core/Inc/manual_mode.h
+ ../Core/Inc/manual_mode.h ../Core/Inc/software_timer.h ../Core/Inc/tim.h \
+ ../Core/Inc/gpio.h
 ../Core/Inc/auto_mode.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -64,3 +65,6 @@ Core/Src/auto_mode.o: ../Core/Src/auto_mode.c ../Core/Inc/auto_mode.h \
 ../Core/Inc/config_mode.h:
 ../Core/Inc/auto_mode.h:
 ../Core/Inc/manual_mode.h:
+../Core/Inc/software_timer.h:
+../Core/Inc/tim.h:
+../Core/Inc/gpio.h:

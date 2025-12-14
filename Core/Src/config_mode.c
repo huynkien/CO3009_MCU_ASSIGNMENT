@@ -6,10 +6,7 @@
  */
 
 #include "config_mode.h"
-<<<<<<< HEAD
-=======
 #include "software_timer.h"
->>>>>>> stimer
 
 /*
  Green light:  [3, 90]
@@ -29,12 +26,7 @@ static uint8_t red_temp_time = 0;
 static uint8_t yel_temp_time = 0;
 static uint8_t grn_temp_time = 0;
 
-<<<<<<< HEAD
-static uint16_t blink_counter = 0;
-static uint8_t  tl_status_all_led = 0;
-=======
 static uint8_t tl_status_all_led = 0;
->>>>>>> stimer
 
 static void display_config_lcd(char* color_name, uint8_t time_value) {
 	lcd_clear_display();
@@ -133,35 +125,13 @@ void init_cfg_red() {
 	red_temp_time = red_time;
 	
 	turn_red_on_both();
-<<<<<<< HEAD
-	blink_counter = CONFIG_TIME;  // CONFIG_TIME is in 10ms units
-	tl_status_all_led = 1;
-	
-	// Display on LCD
-=======
 	setTimer(TIMER_BLINK, CONFIG_BLINK_TICKS);
 	tl_status_all_led = 1;
 	
->>>>>>> stimer
 	display_config_lcd("t_RED", red_temp_time);
 }
 
 void cfg_red() {
-<<<<<<< HEAD
-	if (blink_counter > 0) {
-		blink_counter--;
-	}
-	
-	if (blink_counter == 0) {
-		if (tl_status_all_led == 0) {
-			turn_red_on_both();
-			tl_status_all_led = 1;
-		}  else {
-			turn_off_on_both();
-			tl_status_all_led = 0;
-		}
-		blink_counter = CONFIG_TIME;
-=======
 	if (isTimerExpired(TIMER_BLINK)) {
 		if (tl_status_all_led == 0) {
 			turn_red_on_both();
@@ -171,7 +141,6 @@ void cfg_red() {
 			tl_status_all_led = 0;
 		}
 		setTimer(TIMER_BLINK, CONFIG_BLINK_TICKS);  // Reset blink timer
->>>>>>> stimer
 	}
 }
 
@@ -179,11 +148,7 @@ void init_cfg_yel() {
 	yel_temp_time = yel_time;
 	
 	turn_yel_on_both();
-<<<<<<< HEAD
-	blink_counter = CONFIG_TIME;
-=======
 	setTimer(TIMER_BLINK, CONFIG_BLINK_TICKS);  // Set blink timer
->>>>>>> stimer
 	tl_status_all_led = 1;
 	
 	// Display on LCD
@@ -191,21 +156,6 @@ void init_cfg_yel() {
 }
 
 void cfg_yel() {
-<<<<<<< HEAD
-	if (blink_counter > 0) {
-		blink_counter--;
-	}
-	
-	if (blink_counter == 0) {
-		if (tl_status_all_led == 0) {
-			turn_yel_on_both();
-			tl_status_all_led = 1;
-		}  else {
-			turn_off_on_both();
-			tl_status_all_led = 0;
-		}
-		blink_counter = CONFIG_TIME;
-=======
 	// Check blink timer
 	if (isTimerExpired(TIMER_BLINK)) {
 		if (tl_status_all_led == 0) {
@@ -216,7 +166,6 @@ void cfg_yel() {
 			tl_status_all_led = 0;
 		}
 		setTimer(TIMER_BLINK, CONFIG_BLINK_TICKS);
->>>>>>> stimer
 	}
 }
 
@@ -224,11 +173,7 @@ void init_cfg_grn() {
 	grn_temp_time = grn_time;
 	
 	turn_grn_on_both();
-<<<<<<< HEAD
-	blink_counter = CONFIG_TIME;
-=======
 	setTimer(TIMER_BLINK, CONFIG_BLINK_TICKS);
->>>>>>> stimer
 	tl_status_all_led = 1;
 	
 	// Display on LCD
@@ -236,21 +181,6 @@ void init_cfg_grn() {
 }
 
 void cfg_grn() {
-<<<<<<< HEAD
-	if (blink_counter > 0) {
-		blink_counter--;
-	}
-	
-	if (blink_counter == 0) {
-		if (tl_status_all_led == 0) {
-			turn_grn_on_both();
-			tl_status_all_led = 1;
-		}  else {
-			turn_off_on_both();
-			tl_status_all_led = 0;
-		}
-		blink_counter = CONFIG_TIME;
-=======
 	// Check blink timer
 	if (isTimerExpired(TIMER_BLINK)) {
 		if (tl_status_all_led == 0) {
@@ -261,7 +191,6 @@ void cfg_grn() {
 			tl_status_all_led = 0;
 		}
 		setTimer(TIMER_BLINK, CONFIG_BLINK_TICKS);
->>>>>>> stimer
 	}
 }
 
@@ -284,10 +213,6 @@ void fsm_config_traffic_light_run() {
 				if (red_temp_time < min_red) {
 					red_temp_time = min_red;
 				}
-<<<<<<< HEAD
-				// Update LCD immediately (line 1, after "t_RED: ")
-=======
->>>>>>> stimer
 				lcd_goto_XY(1, 7);
 				lcd_send_integer(red_temp_time);
 				lcd_send_string("  ");
@@ -315,10 +240,6 @@ void fsm_config_traffic_light_run() {
 				if (yel_temp_time < YEL_MIN) {
 					yel_temp_time = YEL_MIN;
 				}
-<<<<<<< HEAD
-				// Update LCD immediately (line 1, after "t_YEL: ")
-=======
->>>>>>> stimer
 				lcd_goto_XY(1, 7);
 				lcd_send_integer(yel_temp_time);
 				lcd_send_string("  ");
@@ -345,10 +266,6 @@ void fsm_config_traffic_light_run() {
 				if (grn_temp_time < GRN_MIN) {
 					grn_temp_time = GRN_MIN;
 				}
-<<<<<<< HEAD
-				// Update LCD immediately (line 1, after "t_GRN: ")
-=======
->>>>>>> stimer
 				lcd_goto_XY(1, 7);
 				lcd_send_integer(grn_temp_time);
 				lcd_send_string("  ");
